@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <title>Task List</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    </head>
+    <body>
+        <h1>Task List</h1>
+        <ul>
+            {% for task in tasks %}
+                <li>
+                    <strong>Title:</strong> {{ task.title }}<br>
+                    <strong>Description:</strong> {{ task.description }}<br>
+                    <strong>Created At:</strong> {{ task.created_at }}<br>
+                    <strong>Due Date:</strong> {{ task.due_date }}<br>
+                    <strong>Is Completed:</strong> {{ task.is_completed }}
+                </li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
