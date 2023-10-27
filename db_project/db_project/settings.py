@@ -14,6 +14,7 @@ import os
 from pathlib import Path
 # from . import local_settings
 import django_heroku
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -86,7 +87,6 @@ WSGI_APPLICATION = 'db_project.wsgi.application'
 # }
 
 # Configure database
-import dj_database_url
 
 DATABASES = {
     'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))
