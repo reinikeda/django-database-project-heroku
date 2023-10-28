@@ -128,6 +128,8 @@ python manage.py dumpdata > data.json
 
 Push to Github and deploy branch again.
 
+<span style="color:red;">!!!</span> Right here I got an issue with database being uploaded on Github because it has sensitive data. I recommend to make your repository private to keep your `.json` file safe. If your repository is private, Heroku app still works. In my example I added my `data.json` to `.gitignore` for safety reasons.
+
 Now open Heroku console (in Heroku app page click on `More` on the right corner and then on `Run console`) and write:
 
 ```python
